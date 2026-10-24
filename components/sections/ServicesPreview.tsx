@@ -8,11 +8,11 @@ import { measurementSteps } from "@/data/process";
 
 export function ServicesPreview() {
   return (
-    <section className="border-y border-line/70 bg-surface py-14 sm:py-20">
+    <section className="border-y border-line/70 bg-surface py-10 sm:py-20">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-14">
           <div className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-sand lg:aspect-[4/4.4]">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-[1.75rem] bg-sand sm:aspect-[4/3] lg:aspect-[4/4.4]">
               <Image
                 src="/images/service-installation.jpg"
                 alt="Мастер устанавливает окно в светлой комнате"

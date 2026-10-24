@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
+import { ContactsStrip } from "@/components/sections/ContactsStrip";
 import { BenefitsStrip } from "@/components/sections/BenefitsStrip";
 import { CategoryGrid } from "@/components/sections/CategoryGrid";
 import { PopularProducts } from "@/components/sections/PopularProducts";
@@ -40,6 +41,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Hero />
+      <ContactsStrip />
       <Reveal>
         <BenefitsStrip />
       </Reveal>

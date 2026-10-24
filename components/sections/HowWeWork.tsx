@@ -7,7 +7,7 @@ import { workSteps } from "@/data/process";
 
 export function HowWeWork() {
   return (
-    <section className="border-t border-line/70 bg-surface py-14 sm:py-20">
+    <section className="border-t border-line/70 bg-surface py-10 sm:py-20">
       <Container>
         <SectionHeading
           eyebrow="Как мы работаем"
@@ -15,22 +15,22 @@ export function HowWeWork() {
           description="Понятный путь без сюрпризов: вы видите, что происходит на каждом этапе."
         />
 
-        <ol className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+        <ol className="mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
           {workSteps.map((step, index) => (
             <li
               key={step.number}
-              className="group animate-fade-up bg-surface p-5 transition-colors duration-300 hover:bg-background sm:p-6"
+              className="group animate-fade-up bg-surface p-4 transition-colors duration-300 hover:bg-background sm:p-6"
               style={{ animationDelay: `${index * 60}ms` }}
             >
-              <div className="flex items-start justify-between gap-3">
-                <span className="text-2xl font-semibold tracking-tightest text-sand-deep transition-colors group-hover:text-accent">
+              <div className="flex items-start justify-between gap-2">
+                <span className="text-xl font-semibold tracking-tightest text-sand-deep transition-colors group-hover:text-accent sm:text-2xl">
                   {step.number}
                 </span>
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent-soft text-accent">
                   <Icon name={step.icon} className="h-4 w-4" />
                 </span>
               </div>
-              <p className="mt-4 text-sm font-semibold">{step.title}</p>
+              <p className="mt-3 text-sm font-semibold sm:mt-4">{step.title}</p>
               <p className="mt-1.5 text-xs leading-relaxed text-muted">{step.description}</p>
             </li>
           ))}

@@ -5,7 +5,7 @@ import { buttonStyles } from "@/components/ui/Button";
 
 export function ChoiceCta() {
   return (
-    <section className="pb-14 sm:pb-20">
+    <section className="pb-10 sm:pb-20">
       <Container>
         <div className="relative overflow-hidden rounded-[1.75rem] bg-foreground px-6 py-10 text-surface sm:px-10 sm:py-12 lg:px-14 lg:py-14">
           <span

@@ -18,7 +18,7 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,253,248,0.9),transparent_55%),radial-gradient(ellipse_at_bottom_right,rgba(225,215,197,0.45),transparent_50%)]"
       />
-      <Container className="relative grid gap-10 py-10 sm:py-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-14 lg:py-20">
+      <Container className="relative grid gap-8 py-8 sm:gap-10 sm:py-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-14 lg:py-20">
         <div className="animate-fade-up">
           <p className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-3.5 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-foreground/65 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
@@ -47,7 +47,7 @@ export function Hero() {
             </Link>
           </div>
 
-          <dl className="mt-8 grid gap-3 border-t border-line pt-6 min-[480px]:grid-cols-3 lg:max-w-xl">
+          <dl className="mt-8 hidden gap-3 border-t border-line pt-6 min-[480px]:grid min-[480px]:grid-cols-3 lg:max-w-xl">
             {trustPoints.map((point) => (
               <div key={point.label} className="flex items-center gap-2.5">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
@@ -81,7 +81,7 @@ export function Hero() {
               Подбор под ваш интерьер
             </div>
 
-            <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/40 bg-surface/95 p-4 shadow-soft backdrop-blur sm:inset-x-auto sm:left-5 sm:w-[19rem]">
+            <div className="absolute inset-x-4 bottom-4 hidden rounded-2xl border border-white/40 bg-surface/95 p-4 shadow-soft backdrop-blur min-[480px]:block sm:inset-x-auto sm:left-5 sm:w-[19rem]">
               <div className="flex items-start gap-3">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent text-white">
                   <Ruler aria-hidden className="h-[1.1rem] w-[1.1rem]" />

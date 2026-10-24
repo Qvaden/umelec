@@ -28,7 +28,7 @@ export function FavoriteButton({
         "inline-flex items-center justify-center gap-2 rounded-full border transition-colors",
         withLabel
           ? "min-h-11 w-full border-line bg-surface px-5 text-sm font-semibold text-foreground hover:border-foreground/30"
-          : "h-9 w-9 border-line/80 bg-surface/90 text-foreground/70 backdrop-blur hover:border-foreground/30 hover:text-foreground",
+          : "h-10 w-10 min-[480px]:h-9 min-[480px]:w-9 border-line/80 bg-surface/90 text-foreground/70 backdrop-blur hover:border-foreground/30 hover:text-foreground",
         active && "text-accent",
         className,
       )}

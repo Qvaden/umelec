@@ -13,7 +13,7 @@ const features = [
 
 export function BalconyPromo() {
   return (
-    <section className="pb-14 sm:pb-20">
+    <section className="pb-10 sm:pb-20">
       <Container>
         <div className="overflow-hidden rounded-[1.75rem] bg-accent text-white">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
@@ -65,7 +65,7 @@ export function BalconyPromo() {
               </div>
             </div>
 
-            <div className="relative min-h-[280px] sm:min-h-[340px] lg:min-h-[480px]">
+            <div className="relative min-h-[220px] sm:min-h-[340px] lg:min-h-[480px]">
               <Image
                 src="/images/balcony-3.jpg"
                 alt="Тёплый балкон с панорамным остеклением и светлой отделкой"

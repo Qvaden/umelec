@@ -5,11 +5,11 @@ import { company } from "@/data/site";
 
 export function LeadCta() {
   return (
-    <section className="pb-14 sm:pb-20">
+    <section className="pb-10 sm:pb-20">
       <Container>
         <div className="overflow-hidden rounded-[1.75rem] border border-line bg-surface">
           <div className="grid lg:grid-cols-[1fr_0.9fr]">
-            <div className="relative flex flex-col justify-between gap-8 bg-sand p-6 sm:p-10 lg:p-12">
+            <div className="relative flex flex-col justify-between gap-6 bg-sand p-5 sm:gap-8 sm:p-10 lg:p-12">
               <span
                 aria-hidden
                 className="pointer-events-none absolute -right-10 -top-10 h-44 w-44 rounded-full border border-foreground/10"
@@ -47,7 +47,7 @@ export function LeadCta() {
               </div>
             </div>
 
-            <div className="p-6 sm:p-8 lg:p-10">
+            <div className="p-5 sm:p-8 lg:p-10">
               <p className="mb-5 text-sm font-semibold">Оставить заявку на замер</p>
               <LeadForm compact buttonLabel="Записаться на замер" />
             </div>

@@ -62,7 +62,7 @@ export function CalculatorSection() {
   };
 
   return (
-    <section className="py-14 sm:py-20">
+    <section className="py-10 sm:py-20">
       <Container>
         <SectionHeading
           eyebrow="Калькулятор"

@@ -11,11 +11,11 @@ const points = [
 
 export function AboutSection() {
   return (
-    <section className="border-t border-line/70 bg-surface py-14 sm:py-20">
+    <section className="border-t border-line/70 bg-surface py-10 sm:py-20">
       <Container>
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-14">
           <div className="relative overflow-hidden rounded-[1.75rem] border border-line bg-sand">
-            <div className="relative aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/4.3]">
+            <div className="relative aspect-[16/10] sm:aspect-[5/4] lg:aspect-[4/4.3]">
               <Image
                 src="/images/about-interior.jpg"
                 alt="Светлая комната с окном, дверью и деревянным полом"

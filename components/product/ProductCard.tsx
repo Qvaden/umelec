@@ -25,7 +25,7 @@ export function ProductCard({ product }: { product: Product }) {
             src={product.images[0].src}
             alt={product.images[0].alt}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            sizes="(max-width: 1024px) 50vw, 25vw"
             className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
           />
         </Link>
@@ -38,38 +38,43 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col p-4 sm:p-[1.125rem]">
+      <div className="flex flex-1 flex-col p-3.5 sm:p-[1.125rem]">
         <p className="text-[0.625rem] font-bold uppercase tracking-[0.14em] text-muted">
           {category?.name ?? "Каталог"}
         </p>
-        <h3 className="mt-1.5 text-[0.9375rem] font-semibold leading-snug tracking-tight">
+        <h3 className="mt-1.5 text-sm font-semibold leading-snug tracking-tight sm:text-[0.9375rem]">
           <Link href={href} className="transition-colors hover:text-accent">
             {product.name}
           </Link>
         </h3>
-        <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted">
+        <p className="mt-1.5 line-clamp-2 text-[0.6875rem] leading-snug text-muted sm:text-xs sm:leading-relaxed">
           {product.shortDescription}
         </p>
         <div className="mt-2.5">
-          <RatingStars value={product.rating} count={product.reviewCount} />
+          <RatingStars
+            value={product.rating}
+            count={product.reviewCount}
+            className="max-[479px]:[&>span:nth-child(2)]:hidden"
+          />
         </div>
 
-        <div className="mt-auto pt-4">
-          <ProductPrice product={product} />
-          <div className="mt-3">
+        <div className="mt-auto pt-3 sm:pt-4">
+          <ProductPrice product={product} className="max-[479px]:text-sm" />
+          <div className="mt-2.5 sm:mt-3">
             {product.price === null ? (
               <Link
                 href={href}
-                className="inline-flex min-h-9 w-full items-center justify-center gap-1.5 rounded-full border border-foreground/20 px-4 text-sm font-semibold transition-colors hover:border-foreground/45 hover:bg-foreground/[0.03]"
+                className="inline-flex min-h-10 w-full items-center justify-center gap-1.5 rounded-full border border-foreground/20 px-2 text-xs font-semibold transition-colors hover:border-foreground/45 hover:bg-foreground/[0.03] min-[480px]:min-h-9 min-[480px]:px-4 min-[480px]:text-sm"
               >
-                Уточнить стоимость
+                <span className="min-[480px]:hidden">Уточнить</span>
+                <span className="hidden min-[480px]:inline">Уточнить стоимость</span>
                 <ArrowUpRight aria-hidden className="h-4 w-4" />
               </Link>
             ) : (
               <QuickAddButton
                 productId={product.id}
                 productName={product.name}
-                className="w-full border border-transparent"
+                className="min-h-10 w-full border border-transparent px-2 text-xs min-[480px]:min-h-9 min-[480px]:px-4 min-[480px]:text-sm"
               />
             )}
           </div>

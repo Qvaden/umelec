@@ -7,7 +7,7 @@ import { company } from "@/data/site";
 
 export function FaqSection() {
   return (
-    <section className="border-t border-line/70 bg-background py-14 sm:py-20">
+    <section className="border-t border-line/70 bg-background py-10 sm:py-20">
       <Container>
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
           <div className="lg:sticky lg:top-28 lg:self-start">
@@ -22,7 +22,7 @@ export function FaqSection() {
               случаю.
             </p>
 
-            <div className="mt-6 rounded-2xl border border-line bg-surface p-5">
+            <div className="mt-6 hidden rounded-2xl border border-line bg-surface p-5 sm:block">
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
                 Связаться с нами
               </p>

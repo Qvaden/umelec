@@ -13,7 +13,7 @@ export function CategoryGrid() {
     .filter((category): category is NonNullable<typeof category> => Boolean(category));
 
   return (
-    <section className="py-14 sm:py-20">
+    <section className="py-10 sm:py-20">
       <Container>
         <SectionHeading
           eyebrow="Ассортимент"
@@ -22,7 +22,7 @@ export function CategoryGrid() {
           action={{ label: "Весь каталог", href: "/catalog" }}
         />
 
-        <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:auto-rows-[11.5rem]">
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-7 sm:gap-4 lg:grid-cols-4 lg:auto-rows-[11.5rem]">
           {homeCategories.map((category, index) => {
             const count = getCategoryProductCount(category.slug);
             const isLarge = index === 0;
@@ -53,7 +53,7 @@ export function CategoryGrid() {
                   aria-hidden
                   className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/15 to-transparent"
                 />
-                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-4 sm:p-5">
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-3.5 sm:p-5">
                   <div className="min-w-0">
                     <p className="text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-white/55">
                       {count} {pluralize(count, " товар", " товара", " товаров")}
@@ -74,7 +74,7 @@ export function CategoryGrid() {
                   </div>
                   <span
                     className={[
-                      "flex shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur transition-all duration-300 group-hover:border-white group-hover:bg-white group-hover:text-foreground",
+                      "flex shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur transition-all duration-300 group-hover:border-white group-hover:bg-white group-hover:text-foreground max-[479px]:hidden",
                       isLarge ? "h-11 w-11" : "h-8 w-8",
                     ].join(" ")}
                     aria-hidden

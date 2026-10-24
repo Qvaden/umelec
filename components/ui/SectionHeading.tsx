@@ -52,7 +52,7 @@ export function SectionHeading({
       {action ? (
         <Link
           href={action.href}
-          className="group inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-foreground transition-colors hover:text-accent"
+          className="group inline-flex min-h-10 shrink-0 items-center gap-1.5 text-sm font-semibold text-foreground transition-colors hover:text-accent sm:min-h-0"
         >
           {action.label}
           <ArrowRight

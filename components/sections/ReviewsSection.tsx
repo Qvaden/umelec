@@ -6,7 +6,7 @@ import { getInitials, pluralize } from "@/lib/utils";
 
 export function ReviewsSection() {
   return (
-    <section className="bg-background py-14 sm:py-20">
+    <section className="bg-background py-10 sm:py-20">
       <Container>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
@@ -28,11 +28,11 @@ export function ReviewsSection() {
           </div>
         </div>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-8 -mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 [contain:paint] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:grid md:grid-cols-3 md:gap-4 md:overflow-visible md:px-0 md:pb-0">
           {reviews.slice(0, 3).map((review) => (
             <figure
               key={review.id}
-              className="flex h-full flex-col rounded-2xl border border-line bg-surface p-5 sm:p-6"
+              className="flex w-[86%] shrink-0 snap-start flex-col rounded-2xl border border-line bg-surface p-5 sm:p-6 md:w-auto"
             >
               <RatingStars value={review.rating} />
               <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground/80">

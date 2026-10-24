@@ -9,7 +9,7 @@ export function PopularProducts() {
   const products = getHitProducts(8);
 
   return (
-    <section className="border-t border-line/70 bg-background py-14 sm:py-20">
+    <section className="border-t border-line/70 bg-background py-10 sm:py-20">
       <Container>
         <SectionHeading
           eyebrow="Выбор покупателей"
