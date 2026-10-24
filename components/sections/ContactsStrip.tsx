@@ -84,7 +84,7 @@ export function ContactsStrip() {
 
           <Link
             href="/contacts"
-            className="col-span-2 inline-flex min-h-11 items-center justify-end gap-1.5 text-xs font-semibold text-accent transition-colors hover:text-accent-hover lg:col-span-1 lg:ml-6 lg:self-center"
+            className="col-span-2 inline-flex min-h-11 items-center justify-end gap-1.5 text-xs font-semibold text-accent transition-colors hover:text-accent-hover lg:col-span-1 lg:pl-6 lg:self-center"
           >
             Все контакты
             <ArrowRight aria-hidden className="h-3.5 w-3.5" />
